@@ -8,13 +8,12 @@
 body {
   font-family: "Poppins", sans-serif;
   color: hsl(240, 41%, 15%);
-  background: rgb(189, 211, 189);
 }
 
 nav {
-   height: 70px;
-   background-color: rgba(0, 0, 0, 0.5); 
-   backdrop-filter: blur(10px);
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
   box-shadow: 0 0 4px #6289ac;
   position: fixed;
   top: 0;
@@ -26,13 +25,13 @@ nav {
 .main-nav {
   justify-content: space-between;
   padding-block: 8px;
+  padding: 20px;
 }
 
 .logo img {
-  width: 120px;
+  width: 40px;
   border-radius: 70px;
 }
-
 
 ul {
   list-style: none;
@@ -42,11 +41,6 @@ ul {
 .nav-links ul {
   margin-right: 70px;
   gap: 50px;
-}
-
-.nav-links ul li:hover::after {
-  width: 100%;
-  color: rgb(176, 68, 68);
 }
 
 .flex {
@@ -72,31 +66,15 @@ ul {
   color: rgb(176, 68, 68);
 }
 
-.nav-links ul li.active::after {
-  width: 100%;
-  background: rgb(176, 68, 68);
-}
-
-
-.nav-item {
-  font-size: 20px;
-  padding: 15px 25px;
-  text-decoration: none;
-  color: black;
-}
-
-
 .nav-links a {
-  color: whitesmoke; 
-  text-decoration: none; 
+  color: whitesmoke;
+  text-decoration: none;
 }
 
 .nav-links a:hover {
-  color: rgb(44, 41, 41); 
-  text-decoration: none; 
+  color: rgb(44, 41, 41);
 }
 
-
 .nav-links a.active {
-  font-weight: bold; 
+  font-weight: bold;
 }

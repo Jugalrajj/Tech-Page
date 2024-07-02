@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-
-
+import logo from "../Navbar/log.png";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
@@ -11,7 +10,7 @@ const Navbar = () => {
     <nav>
       <div className="main-nav container flex">
         <a href="#" className="logo">
-          <img src="images/log.png" alt="Logo" />
+          <img src={logo} alt="Logo" />
         </a>
 
         <div id="nav-links" className="nav-links">
