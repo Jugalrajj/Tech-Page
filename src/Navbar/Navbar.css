@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: hsl(240, 41%, 15%);
+  background: rgb(189, 211, 189);
+}
+
+nav {
+   height: 70px;
+   background-color: rgba(0, 0, 0, 0.5); 
+   backdrop-filter: blur(10px);
+  box-shadow: 0 0 4px #6289ac;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  left: 0;
+  right: 0;
+}
+
+.main-nav {
+  justify-content: space-between;
+  padding-block: 8px;
+}
+
+.logo img {
+  width: 120px;
+  border-radius: 70px;
+}
+
+
+ul {
+  list-style: none;
+  font-weight: bold;
+}
+
+.nav-links ul {
+  margin-right: 70px;
+  gap: 50px;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+  color: rgb(176, 68, 68);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1180px;
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+.hover-link {
+  cursor: pointer;
+}
+
+.hover-link:hover {
+  color: hsl(208, 16%, 65%);
+}
+
+.nav-item.active {
+  color: rgb(176, 68, 68);
+}
+
+.nav-links ul li.active::after {
+  width: 100%;
+  background: rgb(176, 68, 68);
+}
+
+
+.nav-item {
+  font-size: 20px;
+  padding: 15px 25px;
+  text-decoration: none;
+  color: black;
+}
+
+
+.nav-links a {
+  color: whitesmoke; 
+  text-decoration: none; 
+}
+
+.nav-links a:hover {
+  color: rgb(44, 41, 41); 
+  text-decoration: none; 
+}
+
+
+.nav-links a.active {
+  font-weight: bold; 
+}
