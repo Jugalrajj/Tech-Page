@@ -2,12 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 .header {
-  height: 100vh;
-  width: 100vw;
-  background: url("../../Assets/pic2.jpg") no-repeat center center fixed;
+  background: url("../Assets/pic2.jpg") no-repeat center center fixed;
   background-size: cover;
   position: relative;
-  overflow: hidden;
+  height: 100vh; 
+  width: 100vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .header-content {
@@ -28,7 +31,7 @@
   font-weight: 500;
   color: white;
   font-size: max(3.5vw, 22px);
-  line-height: 90px;
+  line-height: 70px;
 }
 
 .header-content p {
@@ -37,6 +40,7 @@
   font-size: 25px;
   
 }
+
 
 .header-content button {
   cursor: pointer;
@@ -47,6 +51,11 @@
   background-color: white;
   font-size: max(1vw, 13px);
   border-radius: 50px;
+}
+
+
+.title1 {
+  color: black;
 }
 
 @media (max-width: 1050px) {
