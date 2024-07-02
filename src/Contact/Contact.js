@@ -1,7 +1,56 @@
 import React from "react";
 import "../Contact/Contact.css";
+import { useState } from "react";
 
 const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!formData.name) newErrors.name = "Username is required";
+    if (!formData.email) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Email address is invalid";
+    }
+    if (!formData.phone) newErrors.phone = "Phone is required";
+    if (!formData.message) newErrors.message = "Message is required";
+
+    return newErrors;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const validationErrors = validateForm();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+    } else {
+      setErrors({});
+      alert("Form submitted successfully", formData);
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    }
+  };
 
   return (
     <div className="contact-us">
@@ -51,22 +100,54 @@ const ContactForm = () => {
           </div>
 
           <div class="contact-formm">
-            <form action="index.html" autocomplete="off">
+            <form onSubmit={handleSubmit} autoComplete="off">
               <h3 class="title">Contact us</h3>
               <div class="input-container">
-                <input type="text" name="name" class="input" placeholder="Username"/>
+                <input
+                  type="text"
+                  name="name"
+                  class="input"
+                  placeholder="Username"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                />
+                {errors.name && <p className="error">{errors.name}</p>}
                 <span>Username</span>
               </div>
               <div class="input-container">
-                <input type="email" name="email" class="input" placeholder="Email"/>
+                <input
+                  type="email"
+                  name="email"
+                  class="input"
+                  placeholder="Email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                />
+                {errors.email && <p className="error">{errors.email}</p>}
                 <span>Email</span>
               </div>
               <div class="input-container">
-                <input type="tel" name="phone" class="input"  placeholder="Phone"/>
+                <input
+                  type="tel"
+                  name="phone"
+                  class="input"
+                  placeholder="Phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                />
+                {errors.phone && <p className="error">{errors.phone}</p>}
                 <span>Phone</span>
               </div>
               <div class="input-container textarea">
-                <textarea name="message" class="input" placeholder="Message"></textarea>
+                <textarea
+                  name="message"
+                  class="input"
+                  placeholder="Message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                >
+                  {errors.message && <p className="error">{errors.message}</p>}
+                </textarea>
                 <span>Message</span>
               </div>
               <input type="submit" value="Send" class="btn" />
