@@ -1,19 +1,19 @@
-.heading{
-  font-size: 50px;
-  /* padding-top: 10px; */
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
-}
-
 .carousel_wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+}
+
+.heading {
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  color: #ffb52b;
 }
 
 .card_wrapper {
@@ -30,7 +30,7 @@
 .container {
   text-align: center;
   font-size: 20px;
-  padding: 5px ;
+  padding: 5px;
 }
 
 .container h4 {

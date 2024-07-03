@@ -6,6 +6,7 @@ import Home from "../src/HomePage/Home";
 import Product from "../src/Product/Product";
 import Contact from "../src/Contact/Contact";
 import CustomProducts from "./Custom Products/CustomProducts";
+import Footer from "./Footer/Footer";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
+      <Footer />
     </Router>
   );
 };
