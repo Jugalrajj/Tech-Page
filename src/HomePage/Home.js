@@ -1,11 +1,7 @@
 import React from "react";
 import "./Home.css";
 import CustomProducts from "../Custom Products/CustomProducts";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "../Custom Products/CustomProducts.css";
-import img1 from "../Assets/pic2.jpg";
+import Features from "../Features";
 
 const Header = () => {
   return (
@@ -20,7 +16,12 @@ const Header = () => {
           </p>
         </div>
       </div>
-      <CustomProducts />
+ <div>
+<Features/>
+ </div>
+<div>
+  <CustomProducts/>
+</div>
     </div>
   );
 };
