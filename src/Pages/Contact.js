@@ -1,19 +1,16 @@
 import React from "react";
-import "../Contact/Contact.css";
 import { useState } from "react";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "",
-    message: "",
   });
 
   const [errors, setErrors] = useState({});
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
     setFormData({
       ...formData,
       [name]: value,
@@ -29,14 +26,11 @@ const ContactForm = () => {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = "Email address is invalid";
     }
-    if (!formData.phone) newErrors.phone = "Phone is required";
-    if (!formData.message) newErrors.message = "Message is required";
-
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
@@ -46,8 +40,6 @@ const ContactForm = () => {
       setFormData({
         name: "",
         email: "",
-        phone: "",
-        message: "",
       });
     }
   };
@@ -116,7 +108,6 @@ const ContactForm = () => {
               </div>
               <div class="input-container">
                 <input
-                  type="email"
                   name="email"
                   class="input"
                   placeholder="Email"
@@ -125,30 +116,6 @@ const ContactForm = () => {
                 />
                 {errors.email && <p className="error">{errors.email}</p>}
                 <span>Email</span>
-              </div>
-              <div class="input-container">
-                <input
-                  type="tel"
-                  name="phone"
-                  class="input"
-                  placeholder="Phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                />
-                {errors.phone && <p className="error">{errors.phone}</p>}
-                <span>Phone</span>
-              </div>
-              <div class="input-container textarea">
-                <textarea
-                  name="message"
-                  class="input"
-                  placeholder="Message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                >
-                  {errors.message && <p className="error">{errors.message}</p>}
-                </textarea>
-                <span>Message</span>
               </div>
               <input type="submit" value="Send" class="btn" />
             </form>
