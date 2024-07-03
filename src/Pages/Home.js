@@ -1,9 +1,15 @@
 import React from "react";
-import "./Home.css";
-import CustomProducts from "../Custom Products/CustomProducts";
+import CustomProducts from "../Custom Component/CustomProducts";
 import Features from "../Features";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+
+  const navigate = useNavigate();
+
+  const handleExploreClick = () => {
+    navigate("/Product");
+  };
   return (
     <div>
       <div className="header">
@@ -14,6 +20,10 @@ const Header = () => {
             enhance your daily life with seamless integration
             <br /> and cutting-edge features.
           </p>
+
+          <button className="explorebtn" onClick={handleExploreClick}>
+            Explore more..
+          </button>
         </div>
       </div>
  <div>
