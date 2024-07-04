@@ -1,5 +1,44 @@
 # Getting Started with Create React App
 
+# Headphones E-commerce Project
+
+## Description
+
+This project is a fully responsive e-commerce website focused on selling headphones. It includes the following screens:
+
+- Home
+- Product
+- Contact
+
+### Home Screen
+
+The home screen serves as the main landing page, providing an overview of the site and navigation options to other sections.
+
+### Product Screen
+
+The product screen lists all available headphones with detailed descriptions, images, name and description
+
+### Contact Screen
+
+The contact screen offers a form for users to reach out with inquiries or support requests.
+
+## Features
+
+- **Responsive Design**: Ensures a seamless experience across all devices (desktops, tablets, and smartphones).
+- **Product Listings**: Displays detailed information about each headphone, including images, prices, and descriptions.
+- **Contact Form**: Provides a way for users to get in touch for support or inquiries.
+
+## Technologies Used
+
+- **Frontend**: HTML, CSS, JavaScript, React
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Jugalrajj/Tech-Page.git
+   ```
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
