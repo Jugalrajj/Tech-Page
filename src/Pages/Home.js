@@ -4,14 +4,17 @@ import Features from "../Features";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
-
   const navigate = useNavigate();
 
   const handleExploreClick = () => {
     navigate("/Product");
   };
   return (
-    <div>
+    <div
+      style={{
+        overflowX: "hidden",
+      }}
+    >
       <div className="header">
         <div className="header-content">
           <h2>Experience the future with our latest tech</h2>
@@ -26,12 +29,12 @@ const Header = () => {
           </button>
         </div>
       </div>
- <div>
-<Features/>
- </div>
-<div>
-  <CustomProducts/>
-</div>
+      <div>
+        <Features />
+      </div>
+      <div>
+        <CustomProducts />
+      </div>
     </div>
   );
 };

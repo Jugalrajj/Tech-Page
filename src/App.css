@@ -95,7 +95,6 @@ body {
 
 /* footer Css start here */
 
-
 a {
   color: #fff;
   text-decoration: none;
@@ -137,17 +136,16 @@ a {
   color: #fff;
 }
 
-
 .footer-content-column ul li a {
   color: #fff;
   text-decoration: none;
 }
 
-.footer-content-column ul{
+.footer-content-column ul {
   display: flex;
   flex-direction: column;
 }
- 
+
 .footer-logo-link {
   display: inline-block;
 }
@@ -205,7 +203,7 @@ a {
   position: relative;
 }
 .footer-call-to-action {
-  margin-top: 30px;
+  margin-top: 1rem;
 }
 .footer-call-to-action-title {
   color: #fffff2;
@@ -344,8 +342,6 @@ a {
     padding: 40px 15px 1050px;
     position: relative;
   }
-
-  
 }
 @media (min-width: 480px) and (max-width: 599px) {
   /* smartphones, Android phones, landscape iPhone */
@@ -361,7 +357,6 @@ a {
     display: flex;
     justify-content: center;
   }
-
 }
 
 @media (min-width: 600px) and (max-width: 800px) {
@@ -394,8 +389,6 @@ a {
 }
 
 /* footer Css end here */
-
-
 
 /* Contact Page css starts here*/
 
@@ -447,17 +440,6 @@ a {
   background-attachment: fixed;
   background-size: 100% 100%;
   position: relative;
-}
-
-.contact-form:before {
-  content: "";
-  position: absolute;
-  width: 26px;
-  height: 26px;
-  background-color: #1abc9c;
-  transform: rotate(45deg);
-  top: 50px;
-  left: -13px;
 }
 
 form {
@@ -704,11 +686,6 @@ textarea.input {
   .contact-formm {
     min-height: 0;
   }
-  .contact-form:before {
-    top: -13px;
-    left: initial;
-    right: 70px;
-  }
 
   .square {
     transform: translate(140%, 43%);
@@ -790,7 +767,6 @@ textarea.input {
 }
 
 .header-content {
-  padding-bottom: 155px;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -830,7 +806,7 @@ textarea.input {
 
 .explorebtn:hover {
   background: #ffb52b;
-  color:white;
+  color: white;
 }
 
 @media (max-width: 1050px) {
@@ -846,7 +822,7 @@ textarea.input {
 
 @media (max-width: 750px) {
   .header-content {
-    max-width: 65%;
+    max-width: 75%;
   }
 
   .header-content h2 {
